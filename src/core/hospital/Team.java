@@ -25,28 +25,39 @@ public class Team {
         this.teamLeader = null;
     }
 
-    public void addLeader(int leaderId) {
-        this.teamLeader = this.getConsultantDoctor(leaderId);
+    public int getId() {
+        return id;
     }
 
-    public ConsultantDoctor getConsultantDoctor(int id) {
-        for (Doctor doctor : this.doctors) {
-            if (doctor.getId() == id && doctor instanceof ConsultantDoctor) {
-                return (ConsultantDoctor) doctor;
-            }
-        }
-        return null;
-    }
-     public int getid() {
-        return this.id;
+    public void setId(int id) {
+        this.id = id;
     }
 
-    public JuniorDoctor getJunior(int id) {
-        for (Doctor doctor : this.doctors) {
-            if (doctor.getId() == id && doctor instanceof JuniorDoctor) {
-                return (JuniorDoctor) doctor;
-            }
-        }
-        return null;
+    public ConsultantDoctor getTeamLeader() {
+        return teamLeader;
     }
+
+    public void setTeamLeader(ConsultantDoctor teamLeader) {
+        this.teamLeader = teamLeader;
+    }
+
+    public ArrayList<Doctor> getDoctors() {
+        return doctors;
+    }
+
+    public void setDoctors(ArrayList<Doctor> doctors) {
+        this.doctors = doctors;
+    }
+
+    public ArrayList<Patient> getPatients() {
+        return patients;
+    }
+
+    public void addPatient(Patient patient) {
+        if (!this.patients.contains(patient)){
+            this.patients.add(patient);
+        } 
+    }
+
+    
 }
