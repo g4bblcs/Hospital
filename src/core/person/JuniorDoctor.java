@@ -12,8 +12,8 @@ import core.hospital.Team;
  */
 public class JuniorDoctor extends Doctor {
 
-    public JuniorDoctor(int id, Team team) {
-        super(id, team);
+    public JuniorDoctor(Team team, int id) {
+        super(team, id);
     }
     
 }

@@ -14,14 +14,15 @@ import java.util.ArrayList;
 public abstract class Doctor {
     protected int id;
     protected Team team;
-    protected ArrayList<Appoiment> appointments = new ArrayList<>();
+    protected ArrayList<Appoiment> appoiments = new ArrayList<>();
     protected ArrayList<Patient> patients = new ArrayList<>();
 
-    public Doctor(int id, Team team) {
+    public Doctor(Team team, int id) {
         this.id = id;
         this.team = team;
-        this.appointments = new ArrayList<>();
+        this.appoiments = new ArrayList<>();
         this.patients = new ArrayList<>();
     }
     
 }
+

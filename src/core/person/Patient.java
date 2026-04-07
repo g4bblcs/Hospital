@@ -8,6 +8,6 @@ package core.person;
  *
  * @author Gabriela Campo
  */
-public class Patient {
+class Patient {
     
 }

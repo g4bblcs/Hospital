@@ -4,6 +4,8 @@
  */
 package main;
 
+import core.hospital.Hospital;
+
 /**
  *
  * @author Gabriela Campo
