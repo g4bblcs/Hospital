@@ -4,10 +4,19 @@
  */
 package core.hospital;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Gabriela Campo
  */
 public class Hospital {
+    private ArrayList<Team> teams = new ArrayList<>();
+    private ArrayList<Ward> wards = new ArrayList<>();
+
+    public Hospital() {
+        this.teams = new ArrayList<>();
+        this.wards = new ArrayList<>();
+    }
     
 }
