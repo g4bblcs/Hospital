@@ -4,14 +4,21 @@
  */
 package core.person;
 
-import core.hospital.*;
+import core.hospital.Team;
 
 /**
  *
  * @author Gabriela Campo
  */
-public class Patient {
-    private int id;
-    private Team team;
-    private Ward ward;
+public class ConsultantDoctor extends Doctor {
+    private boolean leaderOf;
+    public ConsultantDoctor(Team team, int id) {
+        super(team, id);
+    }
+
+    public int getId() {
+        return this.id;
+    }
+    
+    
 }

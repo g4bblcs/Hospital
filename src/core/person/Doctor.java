@@ -23,6 +23,10 @@ public abstract class Doctor {
         this.appoiments = new ArrayList<>();
         this.patients = new ArrayList<>();
     }
+
+    public int getId() {
+        return id;
+    }
     
 }
 

@@ -11,6 +11,7 @@ import java.util.ArrayList;
  * @author Gabriela Campo
  */
 public class Hospital {
+
     private ArrayList<Team> teams = new ArrayList<>();
     private ArrayList<Ward> wards = new ArrayList<>();
 
@@ -18,5 +19,19 @@ public class Hospital {
         this.teams = new ArrayList<>();
         this.wards = new ArrayList<>();
     }
-    
+
+    public void addTeam(int teamid, int leaderid) {
+        this.teams.add(new Team(teamid));
+        this.getTeam(teamid).addLeader(leaderid);
+    }
+
+    public Team getTeam(int id) {
+        for (Team team : this.teams) {
+            if (team.getid() == id) {
+                return team;
+            }
+        }
+        return null;
+    }
 }
+
