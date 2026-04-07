@@ -4,10 +4,16 @@
  */
 package core.person;
 
+import core.hospital.Team;
+
 /**
  *
  * @author Gabriela Campo
  */
-public class JuniorDoctor {
+public class JuniorDoctor extends Doctor {
+
+    public JuniorDoctor(int id, Team team) {
+        super(id, team);
+    }
     
 }
